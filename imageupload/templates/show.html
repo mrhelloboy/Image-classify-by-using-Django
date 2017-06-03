@@ -1,0 +1,17 @@
+<h1>图像分类结果</h1>
+<br/>
+
+<p>上传的图片是: {{ picture.photo.name }}</p>
+<br/>
+
+<img src="{{ picture.photo.url }}", height="200", width="300" />
+<br>
+
+<br>
+    <p>分类结果如下(标签和精确度):</p>
+    {% for i in label %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+<a href="{% url 'index' %}">再来一次?</a>
+
